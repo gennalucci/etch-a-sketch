@@ -10,7 +10,7 @@ body {
   margin: 0;               /* Removes the browser's default 8px outer margin */
 }
 
-#container {
+#grid-container {
 	padding: 0;
   display: flex;
 	flex-wrap: wrap;

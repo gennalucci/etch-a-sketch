@@ -1,6 +1,7 @@
-const container = document.getElementById("container");
+const container = document.getElementById("grid-container");
 const sizeBtn = document.getElementById("size-btn");
 const eraseBtn = document.getElementById("erase-btn");
+
 
 for (let i = 0; i < 256; i++) {
 	const newDiv = document.createElement("div");
@@ -10,3 +11,10 @@ for (let i = 0; i < 256; i++) {
 	});
 	container.appendChild(newDiv);
 }
+
+eraseBtn.addEventListener("click", () => {
+	const cells = document.querySelectorAll('.cell');
+  cells.forEach((cell) => {
+    cell.style.backgroundColor = "white";
+  });
+});
