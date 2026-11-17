@@ -1,4 +1,6 @@
 const container = document.getElementById("container");
+const sizeBtn = document.getElementById("size-btn");
+const eraseBtn = document.getElementById("erase-btn");
 
 for (let i = 0; i < 256; i++) {
 	const newDiv = document.createElement("div");
