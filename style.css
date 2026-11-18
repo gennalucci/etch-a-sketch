@@ -14,11 +14,58 @@ body {
   margin: 0;               /* Removes the browser's default 8px outer margin */
 }
 
+#btn-container {
+	display: flex;
+	justify-content: space-around;
+}
+
+.btn {
+  background-color: #2563eb; /* Modern blue */
+  color: #ffffff;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect */
+.btn:hover {
+  background-color: #1d4ed8; /* Slightly darker blue */
+  box-shadow: 0 6px 10px -1px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+/* Click (active) effect */
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Keyboard accessibility focus ring */
+.btn:focus-visible {
+  outline: 3px solid #93c5fd;
+  outline-offset: 2px;
+}
+
+#container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 800px;
+	height: 872px;
+
+}
+
 #grid-container {
 	padding: 0;
   display: flex;
 	flex-wrap: wrap;
-	align-content: center;    /* Packs all 16 rows together into a block without any spacing between lines */
+	align-content: center;    /* Packs all 16 rows together into a block in center without any spacing between lines */
   width: 800px;                           
   height: 800px;                          
   border: 2px solid black;
