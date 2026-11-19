@@ -8,12 +8,13 @@ function createGrid(size) {
 	// Update CSS variable
 	document.documentElement.style.setProperty('--grid-size', size);
 	for (let i = 0; i < size * size; i++) {
-	const newDiv = document.createElement("div");
-	newDiv.classList.add("cell");
-	newDiv.addEventListener("mouseenter", () => {
-  	newDiv.style.backgroundColor = "purple";
-	});
-	container.appendChild(newDiv);
+		const newDiv = document.createElement("div");
+		newDiv.classList.add("cell");
+		const randomHue = Math.floor(Math.random() * 360) + 1 // Generate a random number between 1 and 360
+		newDiv.addEventListener("mouseenter", () => {
+  		newDiv.style.backgroundColor = `hsl(${randomHue}, 100%, 50%)`;
+		});
+		container.appendChild(newDiv);
 	}
 }
 
