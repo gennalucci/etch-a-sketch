@@ -10,7 +10,9 @@ function createGrid(size) {
 	for (let i = 0; i < size * size; i++) {
 		const newDiv = document.createElement("div");
 		newDiv.classList.add("cell");
-		const randomHue = Math.floor(Math.random() * 360) + 1 // Generate a random number between 1 and 360
+		// Generate a random number between 1 and 360
+		const randomHue = Math.floor(Math.random() * 360) + 1 
+		// Assign a random color to a div when mousing over it
 		newDiv.addEventListener("mouseenter", () => {
   		newDiv.style.backgroundColor = `hsl(${randomHue}, 100%, 50%)`;
 		});
